@@ -1,7 +1,7 @@
 <template>
   <StyleProvider>
     <ExampleProvider>
-      <div class="min-h-screen main-bg">
+      <div style="min-height: 100vh; background-color: #f8f9fa;">
         <RouterView />
       </div>
     </ExampleProvider>

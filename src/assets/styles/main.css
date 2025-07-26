@@ -1,51 +1,113 @@
-/* Importation de la police Montserrat */
-@import '@fontsource-variable/montserrat/index.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/* Styles personnalisés pour la compatibilité */
-@layer base {
-  html {
-    font-family: 'Montserrat Variable', system-ui, sans-serif;
-  }
-  
-  body {
-    background-color: theme('colors.grey.50');
-    color: theme('colors.black.900');
-  }
+/* Styles de base pour l'application */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer components {
-  /* Styles pour les boutons personnalisés */
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  
-  .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md bg-black-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-500 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  
-  .btn-tertiary {
-    @apply inline-flex items-center justify-center rounded-md border border-light-border bg-white px-4 py-2 text-sm font-semibold text-black-900 shadow-sm hover:bg-grey-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  
-  .btn-link {
-    @apply inline-flex items-center justify-center text-sm font-semibold text-black-500 hover:text-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 disabled:opacity-50 disabled:cursor-not-allowed;
-  }
+html {
+  font-family: 'Arial', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-@layer utilities {
-  .main-bg {
-    background-color: #F8FAFC;
-  }
-  
-  .light-border {
-    border-color: #EDEDF0;
-  }
-  
-  .dark-border {
-    border-color: #CBD5E1;
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles pour les boutons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Styles pour les cartes */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les alertes */
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Styles pour le contenu principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* Spinner de chargement */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 } 

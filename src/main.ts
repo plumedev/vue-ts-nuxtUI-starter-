@@ -1,14 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { i18n } from './plugins/i18n'
-import { nuxtUI } from './plugins/nuxtui'
 import router from './router'
 import { createPinia } from 'pinia'
 import './assets/styles/main.css'
 
 const app = createApp(App)
 
-app.use(createPinia()).use(router).use(i18n).use(nuxtUI)
+app.use(createPinia())
+   .use(router)
+   .use(i18n)
 
 app.config.errorHandler = (err, instance, info) => {
   console.error('Global error:', err, 'Vue instance:', instance, 'Error info:', info)
