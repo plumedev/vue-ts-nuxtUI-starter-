@@ -3,6 +3,7 @@ import App from './App.vue'
 import { i18n } from './plugins/i18n'
 import router from './router'
 import { createPinia } from 'pinia'
+import ui from '@nuxt/ui/vue-plugin'
 import './assets/styles/main.css'
 
 const app = createApp(App)
@@ -10,6 +11,7 @@ const app = createApp(App)
 app.use(createPinia())
    .use(router)
    .use(i18n)
+   .use(ui)
 
 app.config.errorHandler = (err, instance, info) => {
   console.error('Global error:', err, 'Vue instance:', instance, 'Error info:', info)

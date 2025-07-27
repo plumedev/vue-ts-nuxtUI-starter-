@@ -1,19 +1,25 @@
 import { getExampleData } from '@/api/example/exampleService'
 import type { IExampleData } from '@/api/example/interfaces/IExampleData'
 import { useRequest } from '@/composables/utils/useRequest'
-import useToast from '@/composables/utils/useToast'
 
 export function useGetExampleData() {
-  const toast = useToast()
-
   const runServices = async (): Promise<IExampleData> => {
     try {
       const result = await getExampleData()
-      toast.displaySuccess({ message: 'Données récupérées avec succès !' })
+      // Utilisation directe du toast de NuxtUI via le composable global
+      const { add } = useToast()
+      add({
+        title: 'Données récupérées avec succès !',
+        color: 'success'
+      })
       return result
     } catch (error: unknown) {
+      const { add } = useToast()
       if (error instanceof Error) {
-        toast.displayError({ message: error.message })
+        add({
+          title: error.message,
+          color: 'error'
+        })
       }
       throw error
     }

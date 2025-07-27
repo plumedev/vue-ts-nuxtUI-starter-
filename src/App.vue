@@ -1,11 +1,13 @@
 <template>
-  <StyleProvider>
-    <ExampleProvider>
-      <div style="min-height: 100vh; background-color: #f8f9fa;">
-        <RouterView />
-      </div>
-    </ExampleProvider>
-  </StyleProvider>
+  <UApp>
+    <StyleProvider>
+      <ExampleProvider>
+        <div style="min-height: 100vh; background-color: #f8f9fa;">
+          <RouterView />
+        </div>
+      </ExampleProvider>
+    </StyleProvider>
+  </UApp>
 </template>
 
 <script lang="ts" setup>

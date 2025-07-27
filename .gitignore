@@ -17,6 +17,10 @@ dist
 dist-ssr
 *.local
 
+# Auto-generated type declarations
+auto-imports.d.ts
+components.d.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -2,16 +2,6 @@
   <div>
     <!-- Le provider encapsule les composants enfants -->
     <slot></slot>
-
-    <!-- Notification toast si configuré -->
-    <v-snackbar
-      v-model="showNotification"
-      :timeout="3000"
-      color="info"
-      top
-    >
-      {{ notificationMessage }}
-    </v-snackbar>
   </div>
 </template>
 
