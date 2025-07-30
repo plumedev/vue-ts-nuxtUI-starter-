@@ -2,23 +2,12 @@
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": [
     "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*"
+    "vite.config.ts"
   ],
   "compilerOptions": {
     "composite": true,
-    "noEmit": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
     "module": "ESNext",
-    "moduleResolution": "node",
-    "types": ["node"],
-    "paths": {
-      "#build/ui": [
-        "./node_modules/@nuxt/ui/.nuxt/ui"
-      ]
-    }
+    "moduleResolution": "Bundler",
+    "types": ["node"]
   }
 }

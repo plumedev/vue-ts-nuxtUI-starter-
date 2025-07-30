@@ -13,7 +13,6 @@ Un starter moderne et complet pour débuter rapidement vos projets Vue3 avec Typ
 - **Tailwind CSS** pour le styling utilitaire
 - **Vite** pour un développement rapide
 - **ESLint + Prettier** pour la qualité du code
-- **Vitest** pour les tests unitaires
 
 ## 📁 Structure du projet
 
@@ -87,10 +86,6 @@ npm run preview
 
 # Linter
 npm run lint
-
-# Tests
-npm run test
-npm run test:coverage
 
 # Formatage du code
 npm run format
